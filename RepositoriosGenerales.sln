@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperRepository", "DapperRepository\DapperRepository.csproj", "{97A1361B-560B-4996-AC81-24DF7B26AA6E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFRepository", "EFRepository\EFRepository.csproj", "{01DA7B54-E607-42DE-8B2D-9FDB32CC07F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{97A1361B-560B-4996-AC81-24DF7B26AA6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97A1361B-560B-4996-AC81-24DF7B26AA6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97A1361B-560B-4996-AC81-24DF7B26AA6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DA7B54-E607-42DE-8B2D-9FDB32CC07F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DA7B54-E607-42DE-8B2D-9FDB32CC07F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DA7B54-E607-42DE-8B2D-9FDB32CC07F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DA7B54-E607-42DE-8B2D-9FDB32CC07F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
