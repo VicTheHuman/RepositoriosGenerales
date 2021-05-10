@@ -1,1 +1,1 @@
-Proyecto que contiene los repositorios que utilizaran los modelos para comunicarse con la base de datos con Dapper y Entity Framework.
+Solución que contiene proyectos para comunicarse con una base de datos SQL Server implementando el patrón de diseñ Repository con Dapper y Entity Framework.
