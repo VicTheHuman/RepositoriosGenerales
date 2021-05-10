@@ -9,13 +9,14 @@ namespace UnitTestProjectDapper
     [TestClass]
     public class ReposMetodosConStoredProcedures
     {
+        private string connectionString = "Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;";
         [TestMethod]
         public void Given_InstanciaRepositorio_When_FindEntity_Then_ReturnEntity()
         {
             Persona result;
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@Id", 7);
-            using (var repository = new RepositoryD("Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;"))
+            using (var repository = new RepositoryD(connectionString))
             {
                 result = repository.FindEntity<Persona>("ObtenerPersona", parametros);
             }
@@ -26,7 +27,7 @@ namespace UnitTestProjectDapper
         {
             List<Persona> result;
             DynamicParameters parametros = new DynamicParameters();
-            using (var repositorio = new RepositoryD("Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;"))
+            using (var repositorio = new RepositoryD(connectionString))
             {
                 result = repositorio.FindEntitySet<Persona>("ObtenerPersonas", parametros) as List<Persona>;
             }
@@ -40,7 +41,7 @@ namespace UnitTestProjectDapper
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@Id", 8);
             parametros.Add("@result", dbType: DbType.Boolean, direction: ParameterDirection.Output);
-            using (var repositorio = new RepositoryD("Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;"))
+            using (var repositorio = new RepositoryD(connectionString))
             {
                 result = repositorio.DeleteEntity("EliminarPersona", parametros, "@result");
             }
@@ -59,7 +60,7 @@ namespace UnitTestProjectDapper
             parametros.Add("@Id", 7);
             parametros.Add("@Nombre", dbType: DbType.String, direction: ParameterDirection.Output, size: 10);
             parametros.Add("@result", dbType: DbType.Boolean, direction: ParameterDirection.Output);
-            using (var repositorio = new RepositoryD("Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;"))
+            using (var repositorio = new RepositoryD(connectionString))
             {
                 result = repositorio.FindProperty("ObtenerPropiedadPersona", parametros, "@result");
                 if (result != null)
@@ -81,7 +82,7 @@ namespace UnitTestProjectDapper
             parametros.Add("@Apellidos", "Zarate");
             parametros.Add("@Edad", 17);
             parametros.Add("@Id", dbType: DbType.Int32, direction: ParameterDirection.Output);
-            using (var repositorio = new RepositoryD("Server=.\\SQLExpress;Database=CSI;Trusted_Connection=True;"))
+            using (var repositorio = new RepositoryD(connectionString))
             {
                 result = repositorio.SaveEntityParametrizedWithReturn("CrearPersona", parametros, "@Id");
             }
